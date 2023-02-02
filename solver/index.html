@@ -27,23 +27,29 @@
         <input id="user-number" type="number" min="2" max="12" pattern="\d*" value="7" onchange="updateNumLeft()" onkeyup="updateNumLeft()"></input>
       </div>
       <div class="card" id="card-right">
-        <p></p>
+        <div class="card-inner">
+          <div id="card-right-front">
+          </div>
+          <div id="card-right-back">
+            <p></p>
+          </div>
+        </div>
       </div>
     </div>
     <div id="guess">
-      <button id="guess-lower" onclick="guessedLower()">lower ↓</button> or
-      <button id="guess-higher" onclick="guessedHigher()">higher ↑</button>
+      <button id="guess-lower" onclick="guessedLower()" title="Guess lower" type="button">lower ↓</button> or
+      <button id="guess-higher" onclick="guessedHigher()" title="Guess higher" type="button">higher ↑</button>
     </div>
-    <button id="retry" onclick="window.location.reload()">next match ⟳</button>
+    <button id="retry" onclick="window.location.reload()" type="reset">next match ⟳</button>
     <p id="result"></p>
 
     <p id="error"></p>
     
     <p id="probability">
-      It is <span id="probability-result"></span> likely that the right card is <em><span id="probability-prediction"></span></em> than the left card.
+      It is <span id="probability-result"></span> likely that the right card is <strong><span id="probability-prediction"></span></strong> than the left card.
       <br><br>
-      The probability that the right card is <em>lower</em> than the left card is <span id="probability-lower"></span> out of 12, or <span id="probability-lower-percentage"></span>%.
-      The probability that the right card is <em>higher</em> than the left card is <span id="probability-higher"></span> out of 12, or <span id="probability-higher-percentage"></span>%.
+      The probability that the right card is <strong>lower</strong> than the left card is <span id="probability-lower"></span> out of 12, or <span id="probability-lower-percentage"></span>%.
+      The probability that the right card is <strong>higher</strong> than the left card is <span id="probability-higher"></span> out of 12, or <span id="probability-higher-percentage"></span>%.
     </p>
 
   </main>
