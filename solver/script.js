@@ -25,7 +25,6 @@ function updateNumLeft() {
 		document.querySelector("#guess-lower").disabled = true;
 		document.querySelector("#guess-higher").disabled = true;
 	}
-	
 }
 
 console.log("numLeft = " + numLeft);
@@ -67,16 +66,12 @@ function getProbability () {
 	}
 }
 
-
 function reveal() {
 	guessCounter++;
 	localStorage.setItem("guessCounter", guessCounter);
-	document.querySelector("#card-right").style.transform = "rotateY(180deg)";
-	document.querySelector("#card-right").style.backgroundColor = "#eae5bf";
-	document.querySelector("#card-right").style.border = "1px solid #79654d";
+	document.querySelector(".card-inner").style.transform = "rotateY(180deg)";
 	document.querySelector("#card-right p").innerHTML = numRight;
-	document.querySelector("#card-right p").style.visibility = "visible";
-	document.querySelector("#card-right p").style.transform = "rotateY(180deg)";
+	document.querySelector("#card-right-front").style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0);"
 	document.querySelector("#guess-lower").disabled = true;
 	document.querySelector("#guess-higher").disabled = true;
 	document.querySelector("#user-number").disabled = true;
