@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FR Higher or Lower Simulator</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c682dba-ddc5-4da4-8b14-a01299303e7a_carw_1x1x180.png?h=486be76311788236d39c253d9f44c025">
+</head>
+
+<body>
+  <div class="background"></div>
+  <header class="wrapper">
+    <h1>Flight Rising Higher or Lower Simulator</h1>
+    <p>
+      A chance based guessing game: will the face-down card be higher or lower?
+      <br><br>
+      Guess whether the face-down card on the right is <em>higher</em> or <em>lower</em> than the card on the left. If you guess correctly, you'll win 65 coins.
+    </p>
+  </header>
+
+  <main class="wrapper">
+    <p id="score">Score: <span></span></p>
+    <p id="coins">Coins: <span></span></p>
+    <p id="guess-counter">Guesses left: <span></span></p>
+    <div class="card-container">
+      <div class="card" id="card-left">
+        <p></p>
+      </div>
+      <div class="card" id="card-right">
+        <p></p>
+      </div>
+    </div>
+    <div id="guess">
+      <button id="guess-lower" onclick="guessedLower()">lower ↓</button> or
+      <button id="guess-higher" onclick="guessedHigher()">higher ↑</button>
+    </div>
+    <button id="retry" onclick="window.location.reload()">next match ⟳</button>
+    <p id="result"></p>
+    <div class="accordion">
+      <div class="accordion-title">Hint</div>
+      <div class="accordion-panel">
+        <p id="probability">
+          It is <span id="probability-result"></span> likely that the right card is <em><span id="probability-prediction"></span></em> than the left card.
+          <br><br>
+          The probability that the right card is <em>lower</em> than the left card is <span id="probability-lower"></span> out of 12, or <span id="probability-lower-percentage"></span>%.
+          The probability that the right card is <em>higher</em> than the left card is <span id="probability-higher"></span> out of 12, or <span id="probability-higher-percentage"></span>%.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="wrapper">
+    <p>
+      This is a <a href="https://www1.flightrising.com/" target="_blank" rel="noopener">Flight Rising</a> helper tool made by <a href="https://www1.flightrising.com/clan-profile/140442" target="_blank" rel="noopener">@fallingjaegers</a>. All images belong to Flight Rising, which is created by Stormlight Workshop, LLC.
+    </p>
+  </footer>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
