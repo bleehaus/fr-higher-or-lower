@@ -212,53 +212,19 @@ button:disabled {
 	margin: 0.2rem 0rem;
 }
 
-.tooltip {
-	position: relative;
-	display: inline-block;
-}
-
-.tooltip button {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-}
-
-.tooltip .tooltip-text {
-	font-size: 1rem !important;
-	width: 170px;
-	text-align: left;
-	color:#000000;
-	background-color:#ffffff;
-	border:1px solid #888888;
-	box-shadow:rgba(0, 0, 0, 0.5) 0px 0px 5px;
-	border-radius:5px;
-	padding: 5px;
-	position: absolute;
-	z-index: 1;
-	top: calc(100% + 0.5rem);
-	left: 0;
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 0.1s;
-}
-
-.tooltip:hover .tooltip-text {
-	visibility: visible;
-	opacity: 1;
-}
-
 footer {
 	margin: 6rem 0rem 0rem 0rem;
 	font-size: 0.75rem;
 	background-color: #dad6c8 !important;
 }
 
-footer a {
+a {
 	color: #731d08;
 	text-decoration: none;
 	transition: color 0.1s;
 }
 
-footer a:hover {
+a:hover {
 	color: #000000;
 }
 
