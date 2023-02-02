@@ -73,12 +73,9 @@ document.querySelector("#card-left p").innerHTML = numLeft;
 function reveal() {
 	guessCounter++;
 	localStorage.setItem("guessCounter", guessCounter);
-	document.querySelector("#card-right").style.transform = "rotateY(180deg)";
-	document.querySelector("#card-right").style.backgroundColor = "#eae5bf";
-	document.querySelector("#card-right").style.border = "1px solid #79654d";
+	document.querySelector(".card-inner").style.transform = "rotateY(180deg)";
 	document.querySelector("#card-right p").innerHTML = numRight;
-	document.querySelector("#card-right p").style.visibility = "visible";
-	document.querySelector("#card-right p").style.transform = "rotateY(180deg)";
+	document.querySelector("#card-right-front").style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0);"
 	if (score == 0) {
 		document.querySelector("#score span").innerHTML = score + " of " +  guessCounter + ", or 0%";
 	} else {
