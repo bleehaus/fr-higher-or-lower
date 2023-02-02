@@ -2,10 +2,10 @@ let numLeft = Math.floor(Math.random()*13) + 1;
 let numRight = Math.floor(Math.random()*13) + 1;
 let score = 0;
 let guessCounter = 0;
-console.log (score);
+console.log ("score = " + score);
 console.log ("local score = " + localStorage.getItem("score"));
 
-if (score == null && isNaN(localStorage.getItem("score"))) {
+if (score == null || isNaN(score) || isNaN(localStorage.getItem("score"))) {
 	score = 0;
 	localStorage.setItem("score", score);
 	console.log("score is null. set score to 0");
@@ -27,7 +27,7 @@ if (guessCounter == null || isNaN(localStorage.getItem("guessCounter"))) {
 
 let probabilityLower = 0;
 let probabilityHigher = 0;
-console.log (score);
+console.log ("score = " + score);
 console.log ("local score = " + localStorage.getItem("score"));
 if (score == 0) {
 	document.querySelector("#score span").innerHTML = score + " of " +  guessCounter + ", or 0%";
