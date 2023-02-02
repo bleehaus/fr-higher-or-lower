@@ -1,2 +1,2 @@
-# fr-hl-solver
-Higher or Lower Solver
+# fr-hl
+Higher or Lower
