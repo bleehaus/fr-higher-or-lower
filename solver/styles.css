@@ -197,16 +197,6 @@ a:hover {
 		gap: 2rem;
 		margin: 2rem auto;
 	}
-
-	.card {
-		height: calc(175px*0.75);
-		width: calc(125px*0.75);
-		font-size: 2.2rem;
-	}
-
-	#user-number {
-		font-size: 2.2rem;
-	}
 }
 
 @media screen and (max-width: 285px) {
