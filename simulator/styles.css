@@ -269,18 +269,8 @@ footer a:hover {
 	}
 
 	.card-container {
-		gap: 2rem;
+		gap: 1.5rem;
 		margin: 2rem auto;
-	}
-
-	.card {
-		height: calc(175px*0.75);
-		width: calc(125px*0.75);
-		font-size: 2.2rem;
-	}
-
-	.info .tooltip .tooltip-text {
-		left: -150px;
 	}
 }
 
