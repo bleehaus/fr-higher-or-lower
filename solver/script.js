@@ -1,5 +1,4 @@
 let numLeft = 7;
-console.log("numLeft = " + numLeft);
 let numRight = Math.floor(Math.random()*13) + 1;
 let guessCounter = 0;
 let probabilityLower = 0;
@@ -7,12 +6,8 @@ let probabilityHigher = 0;
 
 updateNumLeft();
 
-console.log("numLeft = " + numLeft);
-console.log(document.querySelector("#user-number").value);
-
 function updateNumLeft() {
 	numLeft = parseInt(document.querySelector("#user-number").value);
-	console.log("numLeft = " + numLeft);
 	if (numLeft >= 2 && numLeft <= 12 ) {
 		getProbability();
 		document.querySelector("#probability").style.display = "block";
@@ -27,17 +22,12 @@ function updateNumLeft() {
 	}
 }
 
-console.log("numLeft = " + numLeft);
-console.log("numRight = " + numRight);
-
 while (numLeft == 1 || numLeft == 13) {
 	numLeft = Math.floor(Math.random()*13) + 1;
-	console.log("numLeft has been changed to = " + numLeft);
 }
 
 while (numLeft == numRight) {
 	numRight = Math.floor(Math.random()*13) + 1;
-	console.log("numRight has been changed to = " + numRight);
 }
 
 function getProbability () {
@@ -80,7 +70,6 @@ function reveal() {
 }
 
 function guessedHigher() {
-	console.log("guessed higher");
 	if (numRight > numLeft) {
 		correct();
 	}
@@ -91,7 +80,6 @@ function guessedHigher() {
 }
 
 function guessedLower() {
-	console.log("guessed lower");
 	if (numRight < numLeft) {
 		correct();
 	}
